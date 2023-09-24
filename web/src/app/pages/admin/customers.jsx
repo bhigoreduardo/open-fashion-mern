@@ -1,3 +1,9 @@
+import Heading from '@/app/components/ui/heading'
+
 export default function Customers() {
-  return <section>Customers</section>
+  return (
+    <section>
+      <Heading title="Clientes" />
+    </section>
+  )
 }

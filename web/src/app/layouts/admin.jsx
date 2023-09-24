@@ -10,7 +10,7 @@ export default function Admin() {
     <AdminDefaultProviders>
       <main>
         <Header />
-        <section className="flex h-[calc(100vh-60px)] overflow-y-auto">
+        <section className="flex min-h-[calc(100vh-60px)] overflow-y-auto">
           <Sidebar />
           <div className="flex flex-col justify-between w-full bg-gray-100">
             <section className="p-2">

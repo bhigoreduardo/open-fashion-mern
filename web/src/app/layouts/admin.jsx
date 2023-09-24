@@ -10,10 +10,14 @@ export default function Admin() {
     <AdminDefaultProviders>
       <main>
         <Header />
-        <section className="flex">
+        <section className="flex h-[calc(100vh-60px)] overflow-y-auto">
           <Sidebar />
-          <Outlet />
-          <Footer />
+          <div className="flex flex-col justify-between w-full bg-gray-100">
+            <section className="p-2">
+              <Outlet />
+            </section>
+            <Footer />
+          </div>
         </section>
       </main>
     </AdminDefaultProviders>

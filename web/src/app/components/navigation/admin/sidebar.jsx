@@ -16,7 +16,7 @@ export default function Sidebar() {
   }
 
   return (
-    <aside className={`bg-white py-2 ${!adminHeaderToggle ? 'w-[60px]' : 'w-[230px]'}`}>
+    <aside className={`bg-white py-2 h-full w-full overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-100 scrollbar-corner-transparent ${!adminHeaderToggle ? 'max-w-[60px]' : 'max-w-[230px]'}`}>
       <Link to="painel" className={getClassName('painel')}><FaBuromobelexperte size={18} /> {adminHeaderToggle && 'Painel'}</Link>
       <Link to="clientes" className={getClassName('clientes')}><MdGroup /> {adminHeaderToggle && 'Clientes'}</Link>
       <Link to="adicionar-produto" className={getClassName('adicionar-produto')}><FaRegSquarePlus /> {adminHeaderToggle && 'Adicionar produto'}</Link>

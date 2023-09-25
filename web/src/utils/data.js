@@ -1,3 +1,4 @@
+// CUSTOMER
 export const customer = {
   id: 1,
   name: 'Shaikh Abu Dardah',
@@ -17,7 +18,14 @@ export const customer = {
   createdAt: new Date(),
 }
 
+// CATEGORY
 export const category = {
   id: 1,
-  value: 'Roupas',
+  name: 'Roupas',
+  mainCategory: '-',
+  description: 'lorem ipsum et dolor al',
+  typeCategory: 'Produtos',
+  image: 'https://placehold.co/300x300',
 }
+export const categories = new Array(5).fill(category)
+export const parsedCategories = categories.map((item) => ({ id: item.id, value: item.name }))

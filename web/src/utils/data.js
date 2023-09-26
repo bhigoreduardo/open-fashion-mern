@@ -35,6 +35,7 @@ export const customer = {
   id: 1,
   name: 'Shaikh Abu Dardah',
   email: 'shaikhabudardah@email.com',
+  phone: '12345689',
   address: {
     street: 'Dhaka',
     neighborhood: 'Dhaka Sardah',
@@ -46,6 +47,9 @@ export const customer = {
   },
   orders: 2,
   amountSpend: 167.89,
-  lastActive: new Date(),
-  createdAt: new Date(),
+  active: true,
+  online: true,
+  lastActive: formatDate(new Date().toString()),
+  createdAt: formatDate(new Date().toString()),
 }
+export const customers = new Array(5).fill(customer)

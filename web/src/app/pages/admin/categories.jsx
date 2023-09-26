@@ -28,9 +28,9 @@ const dataSource = categories.map((item) => ({
     ),
     quantity: 10, action: (
       <div className="flex items-center gap-2">
-        <button className="cursor-pointer"><FaRegEye /></button>
-        <button className="cursor-pointer"><FaRegPenToSquare /></button>
-        <button className="cursor-pointer"><FaRegTrashCan /></button>
+        <button className="text-gray-400 hover:text-gray-700 transition-all ease-in-out duration-300 cursor-pointer"><FaRegEye /></button>
+        <button className="text-gray-400 hover:text-gray-700 transition-all ease-in-out duration-300 cursor-pointer"><FaRegPenToSquare /></button>
+        <button className="text-gray-400 hover:text-gray-700 transition-all ease-in-out duration-300 cursor-pointer"><FaRegTrashCan /></button>
       </div>
     )
   }))

@@ -33,16 +33,16 @@ const dataSource = products.map((item) => ({
     </div>
   ),
   rating: (
-    <div className="flex flex-col items-center gap-1">
-      <ReactStars count={5} size={16} value={item?.rating?.avg} edit={false} activeColor="#ffd700" />
+    <div className="flex flex-col items-center">
+      <ReactStars count={5} size={16} value={item?.rating?.avg} edit={false} activeColor="#F0C434" />
       <span className="text-xs text-black">({item?.rating?.count})</span>
     </div>
   ),
   action: (
     <div className="flex items-center gap-2">
-      <button className="cursor-pointer"><FaRegEye /></button>
-      <button className="cursor-pointer"><FaRegPenToSquare /></button>
-      <button className="cursor-pointer"><FaRegTrashCan /></button>
+      <button className="text-gray-400 hover:text-gray-700 transition-all ease-in-out duration-300 cursor-pointer"><FaRegEye /></button>
+      <button className="text-gray-400 hover:text-gray-700 transition-all ease-in-out duration-300 cursor-pointer"><FaRegPenToSquare /></button>
+      <button className="text-gray-400 hover:text-gray-700 transition-all ease-in-out duration-300 cursor-pointer"><FaRegTrashCan /></button>
     </div>
   )
 }))
@@ -60,7 +60,7 @@ export default function Products() {
     <section>
       <Heading title="Produtos" />
       <div className="bg-white">
-        <SubHeading title="Todas produtos">
+        <SubHeading title="Todos produtos">
           <div className="flex gap-2 items-center">
             <Input id="name" name="name" placeholder="Pesquisar..." />
             <Button className="text-orange-600 border border-orange-600 bg-white hover:text-white hover:bg-orange-700">

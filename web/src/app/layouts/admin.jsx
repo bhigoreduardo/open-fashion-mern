@@ -12,7 +12,7 @@ export default function Admin() {
         <Header />
         <section className="flex min-h-[calc(100vh-60px)] overflow-y-auto">
           <Sidebar />
-          <div className="flex flex-col justify-between w-full bg-gray-100">
+          <div className="flex flex-grow flex-col justify-between bg-gray-100 overflow-x-hidden">
             <section className="p-2">
               <Outlet />
             </section>

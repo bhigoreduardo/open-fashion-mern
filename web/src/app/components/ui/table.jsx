@@ -11,7 +11,7 @@ export default function Table({ columns, dataSource, filters }) {
           <Select id="show-per-page" name="show-per-page" blankMessage="10" options={[{id: 20, value: 20 }, {id: 30, value: 30 }]} />
         </div>
       </div>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-400">
         <table className="w-full text-sm text-left text-gray-500 border border-dashed border-gray-200">
           <thead className="text-xs text-gray-700 bg-gray-100">
             <tr>

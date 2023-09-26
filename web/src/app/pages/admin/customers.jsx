@@ -43,8 +43,8 @@ export default function Customers() {
           <div className="flex gap-2 items-center">
             <Input id="name" name="name" placeholder="Pesquisar..." />
             <Button className="text-orange-600 border border-orange-600 bg-white hover:text-white hover:bg-orange-700">
-                <FaArrowsRotate size={14} />
-              </Button>
+              <FaArrowsRotate size={14} />
+            </Button>
             <Button className="text-orange-600 border border-orange-600 bg-white hover:text-white hover:bg-orange-700">
               <FaEllipsisVertical size={14} />
             </Button>

@@ -53,3 +53,20 @@ export const customer = {
   createdAt: formatDate(new Date().toString()),
 }
 export const customers = new Array(5).fill(customer)
+
+// ORDER
+export const order = {
+  id: 1,
+  trackCode: '#23123',
+  customer: {
+    name: 'Shaikh Abu Dardah',
+    phone: '12345689',
+  },
+  status: 'pending',
+  amount: 256,
+  productAmount: 12,
+  paymentMethod: 'cash-on',
+  deliveryStatus: 'delivered',
+  createdAt: formatDate(new Date().toString()),
+}
+export const orders = new Array(5).fill(order)

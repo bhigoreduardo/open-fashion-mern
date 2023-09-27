@@ -1,4 +1,5 @@
 import { FaArrowsRotate, FaEllipsisVertical, FaFilter, FaRegEye, FaRegPenToSquare, FaRegTrashCan } from 'react-icons/fa6'
+import { DateRangePicker } from 'rsuite'
 
 import { orders, parsedCategories } from '@/utils/data'
 import Heading from '@/app/components/ui/heading'
@@ -9,7 +10,7 @@ import Table from '@/app/components/ui/table'
 import Select from '@/app/components/ui/input/select'
 import Chip from '@/app/components/ui/chip'
 
-const tableHeader = [
+export const tableHeader = [
   { title: 'Código', dataIndex: 'trackCode' },
   { title: 'Cliente', dataIndex: 'customer' },
   { title: 'Status', dataIndex: 'status' },
@@ -20,7 +21,7 @@ const tableHeader = [
   { title: 'Data compra', dataIndex: 'createdAt' },
   { title: 'Ações', dataIndex: 'action' },
 ]
-const dataSource = orders.map((item) => ({
+export const dataSource = orders.map((item) => ({
   ...item,
   customer: <span>{item?.customer?.name} {item?.customer?.phone}</span>,
   status: <span className="text-red-600">{item.status}</span>,
@@ -38,6 +39,7 @@ const filters = (
     <Select id="active" name="active" blankMessage="Todos status" options={parsedCategories} />
     <Select id="online" name="online" blankMessage="Todos status entrega" options={parsedCategories} />
     <Select id="online" name="online" blankMessage="Todos forma pagamento" options={parsedCategories} />
+    <DateRangePicker appearance="default" placeholder="Período de busca" style={{ width: 230 }} onChange={(value) => console.log(value)} />
     <Button className="text-white bg-orange-600 hover:bg-orange-700 !py-1"><FaFilter size={12} />Filtrar</Button>
   </div>
 )

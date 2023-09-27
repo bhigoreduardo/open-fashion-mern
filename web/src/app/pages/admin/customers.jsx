@@ -1,4 +1,5 @@
 import { FaArrowsRotate, FaEllipsisVertical, FaFilter } from 'react-icons/fa6'
+import { DateRangePicker } from 'rsuite'
 
 import { customers, parsedCategories } from '@/utils/data'
 import Heading from '@/app/components/ui/heading'
@@ -30,6 +31,7 @@ const filters = (
   <div className="flex items-center gap-2">
     <Select id="active" name="active" blankMessage="Ativos/Inativos" options={parsedCategories} />
     <Select id="online" name="online" blankMessage="Online/Offline" options={parsedCategories} />
+    <DateRangePicker appearance="default" placeholder="Período de busca" style={{ width: 230 }} onChange={(value) => console.log(value)} />
     <Button className="text-white bg-orange-600 hover:bg-orange-700 !py-1"><FaFilter size={12} />Filtrar</Button>
   </div>
 )

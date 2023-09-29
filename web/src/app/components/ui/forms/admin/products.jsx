@@ -3,13 +3,14 @@ import ReactQuill from 'react-quill'
 import { FaAngleUp, FaArrowsRotate, FaPlus } from 'react-icons/fa6'
 import 'react-quill/dist/quill.snow.css'
 
-import { parsedCategories } from '@/utils/data'
+import { subCategories, parsedCategories } from '@/utils/data'
 import SubHeading from '@/app/components/ui/sub-heading'
 import Button from '@/app/components/ui/button'
 import Input from '@/app/components/ui/input/input'
 import Textarea from '@/app/components/ui/input/textarea'
 import Select from '@/app/components/ui/input/select'
 import ImageUpload from '@/app/components/ui/input/image-upload'
+import Checkbox from '@/app/components/ui/input/checkbox'
 
 const toolbarOptions = [
   [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
@@ -30,6 +31,7 @@ const toolbarOptions = [
 
 export default function ProductsForm() {
   const [value, setValue] = useState('')
+  console.log(subCategories)
 
   return (
     <div className="flex gap-2 mt-2">
@@ -161,6 +163,7 @@ export default function ProductsForm() {
           </SubHeading>
           <div className="p-2">
             <Input id="name" name="name" placeholder="Pesquisar..." />
+            <Checkbox id="1" label="Finance" />
           </div>
         </div>
 

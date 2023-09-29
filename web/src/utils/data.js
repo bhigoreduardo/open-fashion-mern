@@ -9,8 +9,28 @@ export const category = {
   typeCategory: 'Produtos',
   image: 'https://placehold.co/300x300',
 }
+export const subCategory = {
+  id: 1,
+  name: 'Roupas',
+  mainCategory: [
+    {
+      name: 'Roupas',
+      mainCategory: [{ name: 'Roupas' }],
+    },
+    {
+      name: 'Roupas',
+    },
+  ],
+  description: 'lorem ipsum et dolor al',
+  typeCategory: 'Produtos',
+  image: 'https://placehold.co/300x300',
+}
 export const categories = new Array(5).fill(category)
-export const parsedCategories = categories.map((item) => ({ id: item.id, value: item.name }))
+export const subCategories = new Array(5).fill(subCategory)
+export const parsedCategories = categories.map((item) => ({
+  id: item.id,
+  value: item.name,
+}))
 
 // PRODUCT
 export const product = {
